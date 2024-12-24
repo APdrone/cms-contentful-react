@@ -7,11 +7,6 @@ const client = createClient({
   accessToken: import.meta.env.VITE_ACCESS_TOKEN,
 });
 
-client
-  .getEntries()
-  .then((response) => console.log(response.items))
-  .catch(console.error);
-
 export const useFetchProjects = () => {
   const [loading, setLoading] = useState(true);
   const [projects, setProjects] = useState([]);
